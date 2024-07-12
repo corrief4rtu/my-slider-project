@@ -13,10 +13,51 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #E6E6FA; /* Нежно-лавандовый фон */
         }
         .slider-container {
             margin: 20px 0;
+            width: 80%;
+        }
+        .slider-container label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 20px; /* Увеличенный размер ползунка */
+            background: #ddd;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .15s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px; /* Увеличенный размер ручки ползунка */
+            height: 30px;
+            background: #4CAF50; /* Зеленая ручка */
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 30px;
+            height: 30px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            background: linear-gradient(to right, red, yellow, green, blue, violet); /* Цветной трек */
+            height: 10px;
+            border-radius: 5px;
+        }
+        input[type="range"]::-moz-range-track {
+            background: linear-gradient(to right, red, yellow, green, blue, violet);
+            height: 10px;
+            border-radius: 5px;
         }
         .message {
             display: none;
@@ -28,19 +69,19 @@
 </head>
 <body>
     <div class="slider-container">
-        <label for="slider1">Ползунок 1:</label>
+        <label for="slider1">Ариша:</label>
         <input type="range" id="slider1" min="0" max="100" value="0">
     </div>
     <div class="slider-container">
-        <label for="slider2">Ползунок 2:</label>
+        <label for="slider2">проведи:</label>
         <input type="range" id="slider2" min="0" max="100" value="0">
     </div>
     <div class="slider-container">
-        <label for="slider3">Ползунок 3:</label>
+        <label for="slider3">ползунки:</label>
         <input type="range" id="slider3" min="0" max="100" value="0">
     </div>
     <div class="message" id="message">
-        Все ползунки перемещены!
+        Ариша, ты невероятная красотка!
     </div>
 
     <script>
